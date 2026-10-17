@@ -29,8 +29,8 @@ Gives the agent "semantic vision" over interactive terminal programs — vim, ht
 # from a local checkout
 dsh plugin --profile web add file:./dsh-terminal-vision
 
-# or from GitHub (once published)
-dsh plugin --profile web add github:<username>/dsh-terminal-vision
+# or from GitHub
+dsh plugin --profile web add github:fdfdfdfgbfdgfdg-star/dsh-terminal-vision
 ```
 
 **Windows note:** pnpm blocks native-module install scripts by default. If the
