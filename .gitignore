@@ -1,0 +1,10 @@
+# Dependencies (installed at runtime by pnpm in the profile)
+node_modules/
+package-lock.json.bak
+
+# OS junk
+Thumbs.db
+.DS_Store
+
+# TS incremental
+*.tsbuildinfo
