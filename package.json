@@ -38,8 +38,7 @@
   },
   "scripts": {
     "build": "tsc -p tsconfig.json",
-    "test": "node --test test/integration.test.js",
-    "prepare": "npm run build"
+    "test": "node --test test/integration.test.js"
   },
   "dependencies": {
     "@xterm/headless": "^6.0.0",

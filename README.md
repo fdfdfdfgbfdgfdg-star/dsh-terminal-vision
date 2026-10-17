@@ -80,7 +80,7 @@ npm run build      # tsc → lib/
 npm test           # node --test test/integration.test.js
 ```
 
-`lib/` (compiled JS) is committed, so a plain `dsh plugin add` needs no build step.
+`lib/` (compiled JS) is committed, so a plain `dsh plugin add` needs no build step. For the same reason the package deliberately has **no `prepare` script**: pnpm blocks git-hosted packages from running build scripts on install (`ERR_PNPM_GIT_DEP_PREPARE_NOT_ALLOWED`), and since `lib/` is already in the repository the build is unnecessary. When developing, run `npm run build` and commit the updated `lib/`.
 
 ## Dependencies
 
