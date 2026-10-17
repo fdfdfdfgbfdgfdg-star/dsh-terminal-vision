@@ -1,0 +1,8 @@
+# dsh-terminal-vision bundle layer: applied automatically when the package is
+# installed via `dsh plugin add` (package.json declares dsh.bundle.patch).
+# A profile that installs this bundle gets the tool wiring without any manual
+# cordis.patch.yml edits. Later layers (the profile's own cordis.patch.yml,
+# --patch overlays) can override this row by id.
+- insert:
+    - id: terminal-vision
+      name: dsh-terminal-vision

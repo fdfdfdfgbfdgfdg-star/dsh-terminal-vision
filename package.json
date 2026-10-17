@@ -1,0 +1,57 @@
+{
+  "name": "dsh-terminal-vision",
+  "version": "0.1.0",
+  "description": "Terminal semantic vision plugin for DeepSeek Harness: persistent PTY sessions with a structured screen model (text, cursor, active line) built on @xterm/headless, so agents can drive vim/htop/lazygit-style interactive TUI programs instead of reading raw byte streams.",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dsh-terminal-vision/dsh-terminal-vision.git"
+  },
+  "keywords": [
+    "deepseek-harness",
+    "dsh",
+    "dsh-plugin",
+    "terminal",
+    "pty",
+    "xterm",
+    "screen-model",
+    "agent-tools"
+  ],
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./package.json": "./package.json",
+    "./cordis.patch.yml": "./cordis.patch.yml"
+  },
+  "files": [
+    "lib",
+    "src",
+    "test",
+    "cordis.patch.yml",
+    "tsconfig.json",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=22.19.0"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "node --test test/integration.test.js",
+    "prepare": "npm run build"
+  },
+  "dependencies": {
+    "@xterm/headless": "^6.0.0",
+    "node-pty": "^1.1.0"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.0",
+    "typescript": "^5.9.0"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  }
+}
